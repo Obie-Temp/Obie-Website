@@ -1,3 +1,8 @@
+:root {
+    --background-color1: rgb(228, 228, 228);
+    --background-color2: rgb(41, 41, 41);
+}
+
 *,
 ::before,
 ::after {
@@ -14,6 +19,7 @@ main {
     display: grid;
     grid-template-columns: minmax(2rem, 1fr) minmax(min-content, 94rem) minmax(2rem, 1fr);
     row-gap: 3rem;
+    background-color: var(--background-color2);
 }
 
 .heading {
@@ -24,15 +30,23 @@ main {
 }
 
 .text {
+    border-radius: 10px;
+    padding: 15px;
+    background: var(--background-color1);
     font-size: 1.8rem;
     grid-column: 2/3;
     letter-spacing: 0.6px;
     column-width: 25rem;
 }
 img{
+    border-radius: 15px;
     width: 60%;
     object-fit: cover;
 }
+.img-description{
+    color: var(--background-color1)
+}
 h1{
+    color: var(--background-color1);
     font-size: 4rem;
 }
