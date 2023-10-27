@@ -1,7 +1,7 @@
 :root {
     --background-color1: rgb(228, 228, 228);
     --background-color2: rgb(41, 41, 41);
-    --background-color2-semitransparent: rgb(0, 0, 0, 0.70) ;
+    --background-color2-semitransparent: rgb(0, 0, 0, 0.70);
     --background-color3: orangered;
     --textshadow-color1: 1px 1px 2px black, 0 0 1em red, 0 0 0.2em white;
     --background-gradient-45deg: linear-gradient(45deg, black 0%, darkred 45%, orangered 65%, orange 80%, #dadada 100%);
@@ -9,12 +9,9 @@
     --text-color1: yellow;
 }
 
-*,
-::before,
-::after {
+*{
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
 }
 
 html {
@@ -27,29 +24,39 @@ main {
     row-gap: 3rem;
     background-color: #dadada;
 }
-
-.heading {
-    display:grid;
-    grid-column: 2/3;
-    grid-template-columns: repeat(2, 1fr);
-    row-gap: 1.5rem;
+header{
+    width: 100%;
+    height: 50opx;
 }
-.about-me{
+.heading {
+    display: grid;
+    grid-column: 2/3;
+    grid-template-columns: 40% 60%;
+    margin-top: 50px;
+    background: var(--background-color2-semitransparent);
+    border-radius: 15px;
+    padding: 15px 20px;
+}
+
+.about-me {
     grid-column: 2/3;
     border-radius: 15px;
     background: var(--background-gradient-135deg);
     padding: 10px;
 }
-.section-title{
+
+.section-title {
     color: var(--text-color1);
     text-shadow: var(--textshadow-color1);
     text-align: center;
 }
-.title-description{
+
+.title-description {
     margin-top: 5px;
     font-size: 1.8rem;
 }
-.title-divider{
+
+.title-divider {
     margin: 2rem 2rem;
     height: 8px;
     border: 1px solid rgb(194, 194, 51);
@@ -66,12 +73,16 @@ main {
     column-width: 25rem;
     margin: 15px;
 }
-.intro-picture{
+
+.intro-picture {
     border-radius: 15px;
-    width: 60%;
+    margin: 20px;
+    width: 90%;
     object-fit: cover;
+    
 }
-blockquote{
+
+blockquote {
     border: 2px solid black;
     border-radius: 15px;
     text-shadow: var(--textshadow-color1);
@@ -82,41 +93,67 @@ blockquote{
     padding-top: 3px;
     padding-bottom: 3px;
 }
-hr{
+
+hr {
     width: 90%;
     position: relative;
     left: 1.3rem;
     border-color: rgb(194, 194, 51);
     box-shadow: var(--textshadow-color1);
 }
-.quote{
+
+.quote {
     text-align: center;
     margin: 10px;
     font-size: 2.2rem;
 }
-.small-image{
+
+.small-image {
     border-radius: 15px;
     width: 100%;
 }
-.img-description{
-    color: var(--background-color1)
+
+.img-description {
+    color: var(--background-color1);
+    font-size: 1.6rem;
 }
-h1{
-    
+.about-click{
+    background-color: blue;
+}
+h1 {
+
+    text-align: center;
     font-size: 4rem;
 }
-a{
+
+a {
     color: lightskyblue;
 }
-a:hover{
-    position: relative;
+
+a:hover {
     font-size: 3rem;
     border-radius: 10px;
     background: #dadada;
     color: blue;
 }
 
-.story-text{
-    
+.story-text {
+
     color: #dadada;
+}
+.my-card{
+    text-shadow: var(--textshadow-color1);
+    color: var(--text-color1);
+    margin-top: 20px;
+    font-size: 1.8rem;
+}
+h2{
+    padding-bottom: 25px;
+}
+.skill-link-info, li{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+li{
+    list-style-type: none;
 }
