@@ -1,6 +1,12 @@
 :root {
     --background-color1: rgb(228, 228, 228);
     --background-color2: rgb(41, 41, 41);
+    --background-color2-semitransparent: rgb(0, 0, 0, 0.70) ;
+    --background-color3: orangered;
+    --textshadow-color1: 1px 1px 2px black, 0 0 1em red, 0 0 0.2em white;
+    --background-gradient-45deg: linear-gradient(45deg, black 0%, darkred 45%, orangered 65%, orange 80%, #dadada 100%);
+    --background-gradient-135deg: linear-gradient(135deg, black 0%, darkred 45%, orangered 65%, orange 80%, #dadada 100%);
+    --text-color1: yellow;
 }
 
 *,
@@ -19,7 +25,7 @@ main {
     display: grid;
     grid-template-columns: minmax(2rem, 1fr) minmax(min-content, 94rem) minmax(2rem, 1fr);
     row-gap: 3rem;
-    background-color: var(--background-color2);
+    background-color: #dadada;
 }
 
 .heading {
@@ -28,25 +34,90 @@ main {
     grid-template-columns: repeat(2, 1fr);
     row-gap: 1.5rem;
 }
+.about-me{
+    grid-column: 2/3;
+    border-radius: 15px;
+    background: var(--background-gradient-135deg);
+    padding: 10px;
+}
+.section-title{
+    color: var(--text-color1);
+    text-shadow: var(--textshadow-color1);
+    text-align: center;
+}
+.title-description{
+    margin-top: 5px;
+    font-size: 1.8rem;
+}
+.title-divider{
+    position: relative;
+    width: 95%;
+    margin-top: 10px;
+    padding-top: 7px;
+    left: 24px;
+}
 
 .text {
     border-radius: 10px;
     padding: 15px;
-    background: var(--background-color1);
+    background: var(--background-color2-semitransparent);
     font-size: 1.8rem;
     grid-column: 2/3;
     letter-spacing: 0.6px;
     column-width: 25rem;
+    margin: 15px;
 }
-img{
+.intro-picture{
     border-radius: 15px;
     width: 60%;
     object-fit: cover;
+}
+blockquote{
+    border: 2px solid black;
+    border-radius: 15px;
+    text-shadow: var(--textshadow-color1);
+    color: var(--text-color1);
+    background: var(--background-gradient-45deg);
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+hr{
+    width: 90%;
+    position: relative;
+    left: 13px;
+    border-color: rgb(194, 194, 51);
+    box-shadow: var(--textshadow-color1);
+}
+.quote{
+    text-align: center;
+    margin: 10px;
+    font-size: 2.2rem;
+}
+.small-image{
+    border-radius: 15px;
+    width: 100%;
 }
 .img-description{
     color: var(--background-color1)
 }
 h1{
-    color: var(--background-color1);
+    
     font-size: 4rem;
+}
+a{
+    color: lightskyblue;
+}
+a:hover{
+    position: relative;
+    font-size: 3rem;
+    border-radius: 10px;
+    background: #dadada;
+    color: blue;
+}
+
+.story-text{
+    
+    color: #dadada;
 }
