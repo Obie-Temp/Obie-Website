@@ -50,11 +50,10 @@ main {
     font-size: 1.8rem;
 }
 .title-divider{
-    position: relative;
-    width: 95%;
-    margin-top: 10px;
-    padding-top: 7px;
-    left: 24px;
+    margin: 2rem 2rem;
+    height: 8px;
+    border: 1px solid rgb(194, 194, 51);
+    box-shadow: var(--textshadow-color1);
 }
 
 .text {
@@ -86,7 +85,7 @@ blockquote{
 hr{
     width: 90%;
     position: relative;
-    left: 13px;
+    left: 1.3rem;
     border-color: rgb(194, 194, 51);
     box-shadow: var(--textshadow-color1);
 }
