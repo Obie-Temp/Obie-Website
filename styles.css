@@ -47,7 +47,6 @@ html {
 .nav-link{
     color: var(--text-color1);
     text-shadow: var(--textshadow-color1);
-    background: var(--background-color2-semitransparent);
     padding: 5px;
     border-radius: 10px;
     
