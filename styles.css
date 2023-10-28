@@ -4,8 +4,11 @@
     --background-color2-semitransparent: rgb(0, 0, 0, 0.70);
     --background-color3: orangered;
     --textshadow-color1: 1px 1px 2px black, 0 0 1em red, 0 0 0.2em white;
-    --background-gradient-45deg: linear-gradient(45deg, black 0%, darkred 45%, orangered 60%, orange 75%, #adadad 100%);
-    --background-gradient-135deg: linear-gradient(135deg, black 0%, darkred 45%, orangered 60%, orange 75%, #adadad 100%);
+    --background-gradient-45deg: linear-gradient(45deg, black 0%, darkred 45%, orangered 60%, orange 75%, rgb(219, 219, 219) 100%);
+    --background-gradient-90deg: linear-gradient(90deg, black, rgb(53, 53, 53) 3%,white 30%,white 70%, rgb(53, 53, 53) 97%,black 100%);
+    --background-gradient-135deg: linear-gradient(135deg, black 0%, darkred 45%, orangered 60%, orange 75%, rgb(219, 219, 219) 100%);
+    --background-gradient-175deg: linear-gradient(175deg, black 0%, darkred 45%, orangered 60%, orange 75%, rgb(219, 219, 219) 100%);
+    --background-gradient-235deg: linear-gradient(235deg, black 0%, darkred 45%, orangered 60%, orange 75%, rgb(219, 219, 219) 100%);
     --text-color1: yellow;
 }
 
@@ -25,7 +28,7 @@ html {
     position: fixed;
     top: 0;
    grid-column: 2/3;
-   background: var(--background-gradient-45deg);
+   background: var(--background-gradient-175deg);
    width: 100%;
    height: 60px;
    border-bottom-left-radius: 50%;
@@ -49,7 +52,7 @@ main {
     display: grid;
     grid-template-columns: minmax(2rem, 1fr) minmax(min-content, 94rem) minmax(2rem, 1fr);
     row-gap: 3rem;
-    background-color: #adadad;
+    background: var(--background-gradient-90deg);
     padding-top: 50px;
 }
 
@@ -71,7 +74,7 @@ header {
 .about-me {
     grid-column: 2/3;
     border-radius: 15px;
-    background: var(--background-gradient-135deg);
+    background: var(--background-gradient-235deg);
     padding: 10px;
 }
 
