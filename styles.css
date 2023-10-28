@@ -28,21 +28,33 @@ html {
    grid-column: 2/3;
    background: var(--background-gradient-175deg);
    width: 100%;
-   height: 60px;
-   border-bottom-left-radius: 50%;
-   border-bottom-right-radius: 50%;
+   height: 75px;
+   border-bottom-left-radius: 40%;
+   border-bottom-right-radius: 40%;
+   border: 4px solid rgba(0, 0, 0, 0.35);
+   box-shadow: 0px 6px 30px black;
 }
 #nav-link{
     display: flex;
     justify-content: space-between;
-    padding: 0 20%;
-    font-size: 2.2rem;
+    margin: 0 10px;
+    padding: 0 10%;
+    padding-top: 15px;
+    font-size: 1.8rem;
+    
+    
+}
+.nav-link{
+    color: var(--text-color1);
     text-shadow: var(--textshadow-color1);
+    background: var(--background-color2-semitransparent);
+    padding: 5px;
+    border-radius: 10px;
+    
 }
 .nav-link:hover{
     position: relative;
     background: #bebebe;
-    padding: 5px 0;
     border-radius: 10px;
 }
 
@@ -51,7 +63,7 @@ main {
     grid-template-columns: minmax(2rem, 1fr) minmax(min-content, 94rem) minmax(2rem, 1fr);
     row-gap: 3rem;
     background: var(--background-gradient-90deg);
-    padding-top: 50px;
+    padding-top: 60px;
 }
 
 header {
@@ -154,20 +166,25 @@ h1 {
     font-size: 3.5rem;
 }
 
-a {
+.cert-link, .paragraph-link {
     color: lightskyblue;
+}
+.cert-link:hover{
+    background: #bebebe;
+    padding: 3px;
+    border-radius: 10px;
 }
 
 .paragraph-link:hover {
-    font-size: 3rem;
+    padding: 3px;
     border-radius: 10px;
-    background: #dadada;
+    background: #bebebe;
     color: blue;
 }
 
 .story-text {
 
-    color: #dadada;
+    color: #bebebe;
 }
 
 .my-card {
@@ -198,4 +215,7 @@ li {
     padding-top: 10px;
     padding-bottom: 10px;
     margin: 0 40px;
+}
+a{
+    text-decoration: none;
 }
