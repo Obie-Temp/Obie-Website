@@ -55,6 +55,7 @@ html {
     position: relative;
     background: #bebebe;
     border-radius: 10px;
+    color: black;
 }
 
 main {
@@ -198,13 +199,14 @@ h1 {
     background: #bebebe;
     padding: 3px;
     border-radius: 10px;
+    color: black;
 }
 
 .paragraph-link:hover {
     padding: 3px;
     border-radius: 10px;
     background: #bebebe;
-    color: blue;
+    color: black;
 }
 
 .story-text {
