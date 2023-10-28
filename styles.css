@@ -64,9 +64,32 @@ main {
     background: var(--background-gradient-90deg);
     padding-top: 60px;
 }
+#welcome-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 85vh;
+    grid-column: 2/3;
+}
+#welcome-title{
+    color: black;
+    text-shadow: 1px 1px 2px white, 0 0 1em black, 0 0 0.2em black;
+}
+#welcome-message{
+    text-align: center;
+    font-size: 1.8rem;
+    color: black;
+    text-shadow: 1px 1px 2px white, 0 0 1em black, 0 0 0.2em black;
+}
 
 header {
     width: 100%;
+    align-items: center;
+    text-align: center;
+    margin: auto auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    
 }
 
 .heading {
@@ -78,6 +101,7 @@ header {
     background: var(--background-gradient-135deg);
     border-radius: 15px;
     padding: 15px 20px;
+    box-shadow: 0px 6px 30px black;
 }
 
 .about-me {
@@ -85,6 +109,7 @@ header {
     border-radius: 15px;
     background: var(--background-gradient-235deg);
     padding: 10px;
+    box-shadow: 0px 6px 30px black;
 }
 
 .section-title {
@@ -155,7 +180,8 @@ blockquote {
 }
 
 .img-description {
-    color: var(--background-color1);
+    color: var(--text-color1);
+    text-shadow: var(--textshadow-color1);
     font-size: 1.6rem;
 }
 h1 {
