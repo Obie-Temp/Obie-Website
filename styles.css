@@ -4,8 +4,8 @@
     --background-color2-semitransparent: rgb(0, 0, 0, 0.70);
     --background-color3: orangered;
     --textshadow-color1: 1px 1px 2px black, 0 0 1em red, 0 0 0.2em white;
-    --background-gradient-45deg: linear-gradient(45deg, black 0%, darkred 45%, orangered 60%, orange 75%, #bebebe 100%);
-    --background-gradient-135deg: linear-gradient(135deg, black 0%, darkred 45%, orangered 60%, orange 75%, #bebebe 100%);
+    --background-gradient-45deg: linear-gradient(45deg, black 0%, darkred 45%, orangered 60%, orange 75%, #adadad 100%);
+    --background-gradient-135deg: linear-gradient(135deg, black 0%, darkred 45%, orangered 60%, orange 75%, #adadad 100%);
     --text-color1: yellow;
 }
 
@@ -25,9 +25,9 @@ html {
     position: fixed;
     top: 0;
    grid-column: 2/3;
-   background: black;
+   background: var(--background-gradient-45deg);
    width: 100%;
-   height: 45px;
+   height: 60px;
    border-bottom-left-radius: 50%;
    border-bottom-right-radius: 50%;
 }
@@ -35,17 +35,21 @@ html {
     display: flex;
     justify-content: space-between;
     padding: 0 20%;
-    font-size: 1.8rem;
+    font-size: 2.2rem;
+    text-shadow: var(--textshadow-color1);
 }
 .nav-link:hover{
+    position: relative;
     background: #bebebe;
+    padding: 5px 0;
+    border-radius: 10px;
 }
 
 main {
     display: grid;
     grid-template-columns: minmax(2rem, 1fr) minmax(min-content, 94rem) minmax(2rem, 1fr);
     row-gap: 3rem;
-    background-color: #bebebe;
+    background-color: #adadad;
     padding-top: 50px;
 }
 
