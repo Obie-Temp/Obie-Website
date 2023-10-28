@@ -4,12 +4,12 @@
     --background-color2-semitransparent: rgb(0, 0, 0, 0.70);
     --background-color3: orangered;
     --textshadow-color1: 1px 1px 2px black, 0 0 1em red, 0 0 0.2em white;
-    --background-gradient-45deg: linear-gradient(45deg, black 0%, darkred 45%, orangered 65%, orange 80%, #dadada 100%);
-    --background-gradient-135deg: linear-gradient(135deg, black 0%, darkred 45%, orangered 65%, orange 80%, #dadada 100%);
+    --background-gradient-45deg: linear-gradient(45deg, black 0%, darkred 45%, orangered 60%, orange 75%, #bebebe 100%);
+    --background-gradient-135deg: linear-gradient(135deg, black 0%, darkred 45%, orangered 60%, orange 75%, #bebebe 100%);
     --text-color1: yellow;
 }
 
-*{
+* {
     padding: 0;
     margin: 0;
 }
@@ -18,22 +18,48 @@ html {
     font-size: 62.5%;
 }
 
+.page-wrapper {
+    position: relative;
+}
+#nav-header{
+    position: fixed;
+    top: 0;
+   grid-column: 2/3;
+   background: black;
+   width: 100%;
+   height: 45px;
+   border-bottom-left-radius: 50%;
+   border-bottom-right-radius: 50%;
+}
+#nav-link{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20%;
+    font-size: 1.8rem;
+}
+.nav-link:hover{
+    background: #bebebe;
+}
+
 main {
     display: grid;
     grid-template-columns: minmax(2rem, 1fr) minmax(min-content, 94rem) minmax(2rem, 1fr);
     row-gap: 3rem;
-    background-color: #dadada;
+    background-color: #bebebe;
+    padding-top: 50px;
 }
-header{
+
+header {
     width: 100%;
-    height: 50opx;
 }
+
 .heading {
     display: grid;
     grid-column: 2/3;
     grid-template-columns: 40% 60%;
+
     margin-top: 50px;
-    background: var(--background-color2-semitransparent);
+    background: var(--background-gradient-135deg);
     border-radius: 15px;
     padding: 15px 20px;
 }
@@ -75,11 +101,11 @@ header{
 }
 
 .intro-picture {
+    grid-column: 1/2;
     border-radius: 15px;
-    margin: 20px;
+    margin: 20px auto;
     width: 90%;
     object-fit: cover;
-    
 }
 
 blockquote {
@@ -117,20 +143,18 @@ hr {
     color: var(--background-color1);
     font-size: 1.6rem;
 }
-.about-click{
-    background-color: blue;
-}
 h1 {
-
+    text-shadow: var(--textshadow-color1);
+    color: var(--text-color1);
     text-align: center;
-    font-size: 4rem;
+    font-size: 3.5rem;
 }
 
 a {
     color: lightskyblue;
 }
 
-a:hover {
+.paragraph-link:hover {
     font-size: 3rem;
     border-radius: 10px;
     background: #dadada;
@@ -141,19 +165,33 @@ a:hover {
 
     color: #dadada;
 }
-.my-card{
+
+.my-card {
     text-shadow: var(--textshadow-color1);
     color: var(--text-color1);
-    margin-top: 20px;
+    margin: 40px auto;
     font-size: 1.8rem;
+    background: var(--background-color2-semitransparent);
+    border-radius: 5%;
 }
-h2{
-    padding-bottom: 25px;
-}
-.skill-link-info, li{
-    padding-top: 10px;
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
     padding-bottom: 10px;
 }
-li{
+
+.skill-link-info,
+li {
+    padding-top: 5px;
+    text-align: center;
+}
+
+li {
     list-style-type: none;
+}
+.certifications{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0 40px;
 }
