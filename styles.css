@@ -1,14 +1,14 @@
 :root {
-    --background-color1: rgb(228, 228, 228);
+    --background-color1: rgb(200, 200, 200);
     --background-color2: rgb(41, 41, 41);
     --background-color2-semitransparent: rgb(0, 0, 0, 0.70);
     --background-color3: orangered;
     --textshadow-color1: 1px 1px 2px black, 0 0 1em red, 0 0 0.2em white;
-    --background-gradient-45deg: linear-gradient(45deg, black 0%, darkred 45%, orangered 60%, orange 75%, rgb(219, 219, 219) 100%);
-    --background-gradient-90deg: linear-gradient(90deg, black, rgb(53, 53, 53) 3%,white 30%,white 70%, rgb(53, 53, 53) 97%,black 100%);
-    --background-gradient-135deg: linear-gradient(135deg, black 0%, darkred 45%, orangered 60%, orange 75%, rgb(219, 219, 219) 100%);
-    --background-gradient-175deg: linear-gradient(175deg, black 0%, darkred 45%, orangered 60%, orange 75%, rgb(219, 219, 219) 100%);
-    --background-gradient-235deg: linear-gradient(235deg, black 0%, darkred 45%, orangered 60%, orange 75%, rgb(219, 219, 219) 100%);
+    --background-gradient-45deg: linear-gradient(45deg, black 0%, darkred 45%, orangered 60%, orange 75%, rgb(200, 200, 200) 100%);
+    --background-gradient-90deg: linear-gradient(90deg, black, rgb(53, 53, 53) 3%, rgb(200, 200, 200) 30%, rgb(200, 200, 200) 70%, rgb(53, 53, 53) 97%, black 100%);
+    --background-gradient-135deg: linear-gradient(135deg, black 0%, darkred 45%, orangered 60%, orange 75%, rgb(200, 200, 200) 100%);
+    --background-gradient-175deg: linear-gradient(175deg, black 0%, darkred 45%, orangered 60%, orange 75%, rgb(200, 200, 200) 100%);
+    --background-gradient-235deg: linear-gradient(235deg, black 0%, darkred 45%, orangered 60%, orange 75%, rgb(200, 200, 200) 100%);
     --text-color1: yellow;
 }
 
@@ -21,43 +21,6 @@ html {
     font-size: 62.5%;
 }
 
-
-#nav-header{
-    position: fixed;
-    top: 0;
-   grid-column: 2/3;
-   background: var(--background-gradient-175deg);
-   width: 100%;
-   height: 75px;
-   border-bottom-left-radius: 40%;
-   border-bottom-right-radius: 40%;
-   border: 4px solid rgba(0, 0, 0, 0.35);
-   box-shadow: 0px 6px 30px black;
-}
-#nav-link{
-    display: flex;
-    justify-content: space-between;
-    margin: 0 10px;
-    padding: 0 10%;
-    padding-top: 15px;
-    font-size: 1.8rem;
-    
-    
-}
-.nav-link{
-    color: var(--text-color1);
-    text-shadow: var(--textshadow-color1);
-    padding: 5px;
-    border-radius: 10px;
-    
-}
-.nav-link:hover{
-    position: relative;
-    background: #bebebe;
-    border-radius: 10px;
-    color: black;
-}
-
 main {
     display: grid;
     grid-template-columns: minmax(2rem, 1fr) minmax(min-content, 94rem) minmax(2rem, 1fr);
@@ -65,32 +28,65 @@ main {
     background: var(--background-gradient-90deg);
     padding-top: 60px;
 }
-#welcome-section{
+
+#nav-header {
+    position: fixed;
+    top: 0;
+    grid-column: 2/3;
+    background: var(--background-gradient-175deg);
+    width: 100%;
+    height: 75px;
+    border-bottom-left-radius: 40%;
+    border-bottom-right-radius: 40%;
+    border: 4px solid rgba(0, 0, 0, 0.35);
+    box-shadow: 0px 6px 30px black;
+}
+
+#nav-link {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px;
+    padding: 0 10%;
+    padding-top: 15px;
+    font-size: 1.8rem;
+
+
+}
+
+.nav-link {
+    color: var(--text-color1);
+    text-shadow: var(--textshadow-color1);
+    padding: 5px;
+    border-radius: 10px;
+
+}
+
+.nav-link:hover {
+    position: relative;
+    background: #bebebe;
+    border-radius: 10px;
+    color: black;
+}
+
+#welcome-section {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 85vh;
     grid-column: 2/3;
 }
-#welcome-title{
+
+#welcome-title {
     color: black;
-    text-shadow: 1px 1px 2px white, 0 0 1em black, 0 0 0.2em black;
-}
-.welcome-message{
-    text-align: center;
-    font-size: 1.8rem;
-    color: black;
+    font-size: 4.8rem;
     text-shadow: 1px 1px 2px white, 0 0 1em black, 0 0 0.2em black;
 }
 
-header {
-    width: 100%;
-    align-items: center;
+.welcome-message {
     text-align: center;
-    margin: auto auto;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    
+    font-size: 3.4rem;
+    color: black;
+    text-shadow: 1px 1px 2px white, 0 0 1em black, 0 0 0.2em black;
 }
 
 .heading {
@@ -105,86 +101,17 @@ header {
     box-shadow: 0px 6px 30px black;
 }
 
-.about-me {
-    grid-column: 2/3;
-    border-radius: 15px;
-    background: var(--background-gradient-235deg);
-    padding: 10px;
-    box-shadow: 0px 6px 30px black;
-}
 
-.section-title {
-    color: var(--text-color1);
-    text-shadow: var(--textshadow-color1);
-    text-align: center;
-}
-
-.title-description {
-    margin: 2rem 2rem;
-    font-size: 1.8rem;
-}
-
-.title-divider {
-    border: 1px solid rgb(194, 194, 51);
-    color: rgb(194, 194, 51);
-    box-shadow: var(--textshadow-color1);
-}
-.small-div{
-    height: 1px;
-    width: 90%;
-    margin: 3px auto;
-}
-.big-div{
-    margin: 2rem 2rem;
-    height: 8px;
-}
-.text {
-    border-radius: 10px;
-    padding: 15px;
-    background: var(--background-color2-semitransparent);
-    font-size: 1.8rem;
-    grid-column: 2/3;
-    letter-spacing: 0.6px;
-    column-width: 25rem;
-    margin: 15px;
-}
-
-.intro-picture {
-    grid-column: 1/2;
-    border-radius: 15px;
-    margin: 20px auto;
-    width: 90%;
-    object-fit: cover;
-}
-
-blockquote {
-    border: 2px solid black;
-    border-radius: 15px;
-    text-shadow: var(--textshadow-color1);
-    color: var(--text-color1);
-    background: var(--background-gradient-45deg);
-    margin-top: 15px;
-    margin-bottom: 15px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-}
-
-.quote {
-    text-align: center;
-    margin: 10px;
-    font-size: 2.2rem;
-}
-
-.small-image {
-    border-radius: 15px;
+header {
     width: 100%;
+    align-items: center;
+    text-align: center;
+    margin: auto auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
 }
 
-.img-description {
-    color: var(--text-color1);
-    text-shadow: var(--textshadow-color1);
-    font-size: 1.6rem;
-}
 h1 {
     text-shadow: var(--textshadow-color1);
     color: var(--text-color1);
@@ -192,32 +119,28 @@ h1 {
     font-size: 3.5rem;
 }
 
-.cert-link, .paragraph-link {
-    color: lightskyblue;
-}
-.cert-link:hover{
-    background: #bebebe;
-    padding: 3px;
-    border-radius: 10px;
-    color: black;
+.intro-picture {
+    margin-top: 15px;
+    grid-column: 1/2;
+    border-radius: 15px;
+    width: 90%;
 }
 
-.paragraph-link:hover {
-    padding: 3px;
-    border-radius: 10px;
-    background: #bebebe;
-    color: black;
-}
-
-.story-text {
-
-    color: #bebebe;
+.img-description {
+    color: var(--text-color1);
+    text-shadow: var(--textshadow-color1);
+    font-size: 1.6rem;
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 90%;
 }
 
 .my-card {
     text-shadow: var(--textshadow-color1);
     color: var(--text-color1);
-    margin: 40px auto;
+    margin: 0 auto;
+    padding-top: 15px;
+    padding-bottom: 30px;
     font-size: 1.8rem;
     background: var(--background-color2-semitransparent);
     border-radius: 5%;
@@ -235,14 +158,139 @@ li {
     text-align: center;
 }
 
-li {
-    list-style-type: none;
+.title-divider {
+    border: 1px solid rgb(194, 194, 51);
+    color: rgb(194, 194, 51);
+    box-shadow: var(--textshadow-color1);
 }
-.certifications{
+
+.big-div {
+    margin: 2rem 2rem;
+    height: 8px;
+}
+
+.certifications {
     padding-top: 10px;
     padding-bottom: 10px;
     margin: 0 40px;
 }
-a{
+
+.cert-link,
+.paragraph-link {
+    color: lightskyblue;
+}
+
+.cert-link:hover {
+    background: #bebebe;
+    padding: 3px;
+    border-radius: 10px;
+    color: black;
+}
+
+.paragraph-link:hover {
+    padding: 3px;
+    border-radius: 10px;
+    background: #bebebe;
+    color: black;
+}
+
+.about-me {
+    grid-column: 2/3;
+    border-radius: 15px;
+    background: var(--background-gradient-235deg);
+    padding: 10px;
+    box-shadow: 0px 6px 30px black;
+}
+
+.section-title {
+    color: var(--text-color1);
+    text-shadow: var(--textshadow-color1);
+    text-align: center;
+}
+
+
+.title-description {
+    margin: 2rem 2rem;
+    font-size: 1.8rem;
+}
+
+.text {
+    border-radius: 10px;
+    padding: 15px;
+    background: var(--background-color2-semitransparent);
+    font-size: 1.8rem;
+    grid-column: 2/3;
+    letter-spacing: 0.6px;
+    column-width: 25rem;
+    margin: 15px;
+}
+
+.story-text {
+
+    color: #fff;
+}
+
+blockquote {
+    border: 2px solid black;
+    border-radius: 15px;
+    text-shadow: var(--textshadow-color1);
+    color: var(--text-color1);
+    background: var(--background-gradient-45deg);
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.small-div {
+    height: 1px;
+    width: 90%;
+    margin: 3px auto;
+}
+
+.quote {
+    text-align: center;
+    margin: 10px;
+    font-size: 2.2rem;
+}
+
+.small-image {
+    margin-top: 15px;
+    border-radius: 15px;
+    width: 100%;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
     text-decoration: none;
+}
+
+@media screen and (max-width: 719px) {
+    main {}
+
+    .heading {
+        display: grid;
+        grid-template-columns: none;
+
+    }
+
+    header {
+        grid-template-rows: 50% 50%;
+        grid-row: 1/2;
+        align-items: normal;
+        margin-top: 15px;
+        margin-bottom: 20px;
+
+    }
+    .intro-picture{
+        width: 75%;
+    }
+
+    .my-card {
+        grid-row: 2/2;
+        margin-bottom: 20px;
+    }
 }
